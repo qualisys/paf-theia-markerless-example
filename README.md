@@ -8,6 +8,8 @@ To download this example project to your computer, you can either:
 <br>_— or —_
 * Clone this repository to your computer.
 
+To download a specific release, please [Click here](https://github.com/qualisys/paf-theia-markerless-example/releases)
+
 ## Preparing Qualisys data for Theia3D processing
 
 1. Install [Theia](https://www.theiamarkerless.ca/) and accompanying engine.
