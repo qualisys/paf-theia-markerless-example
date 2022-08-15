@@ -1,3 +1,13 @@
+! Use filtered data for link model based and force signals
+Set_Use_Processed_Analog
+/USE_PROCESSED=TRUE
+;
+
+Set_Use_Processed_Targets
+/USE_PROCESSED=TRUE
+! /RECALC=TRUE
+;
+
 !====================================================
 !Save frame rate so that it is available for other commands
 !====================================================
@@ -65,6 +75,19 @@ Lowpass_Filter
 /SIGNAL_FOLDER=PROCESSED
 ! /RESULT_SUFFIX=
 ! /RESULT_FOLDER=PROCESSED
+! /FILTER_CLASS=BUTTERWORTH
+/FREQUENCY_CUTOFF=20
+! /NUM_REFLECTED=6
+! /TOTAL_BUFFER_SIZE=6
+! /NUM_BIDIRECTIONAL_PASSES=1
+;
+
+Lowpass_Filter
+/SIGNAL_TYPES=ANALOG
+! /SIGNAL_NAMES=
+/SIGNAL_FOLDER=ORIGINAL
+! /RESULT_SUFFIX=
+/RESULT_FOLDER=PROCESSED
 ! /FILTER_CLASS=BUTTERWORTH
 /FREQUENCY_CUTOFF=20
 ! /NUM_REFLECTED=6
