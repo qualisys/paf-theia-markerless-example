@@ -43,10 +43,12 @@ Measurements:
     Maximum count: 1
     Count: 1
     Measurement type: Static
+    Fields: [Theia c3d file]
   Dynamic:
     Maximum count: 5
     Count: 3
     Measurement type: Dynamic
+    Fields: [Theia c3d file]
 
 Analyses:
   Theia and V3D Processing:
@@ -130,6 +132,10 @@ Fields:
     Type: String
   Test condition:
     Type: String
+  Theia c3d file:
+    Type: Enum
+    Values: [0, 1, 2, 3, 4, 5]
+    Default: 0
 
 Columns:
   Default column definitions:
