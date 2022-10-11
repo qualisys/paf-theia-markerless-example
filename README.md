@@ -2,13 +2,13 @@
 
 ## Getting started
 
-To download this example project to your computer, you can either:
+To download the latest version (not tested) of the example project to your computer, you can either:
 
 * [Click here](https://github.com/qualisys/paf-theia-markerless-example/archive/refs/heads/main.zip) to download it as a zip file.
 <br>_— or —_
 * Clone this repository to your computer.
 
-To download a specific release, please [Click here](https://github.com/qualisys/paf-theia-markerless-example/releases)
+To download a release version (tested), please [Click here](https://github.com/qualisys/paf-theia-markerless-example/releases)
 
 ## Preparing Qualisys data for Theia3D processing
 
@@ -21,11 +21,6 @@ To download a specific release, please [Click here](https://github.com/qualisys/
 6. Extract downloaded .zip file into the projects data folder "Theia Markerless Example\Data"
 7. To process the data, you have to first click on **Theia and V3D Processing**
     > Note: The following Theia specific settings along with their descriptions are available in Templates\settings.php: save_workspace, theia_filter_type, theia_filter_cutoff, enable_knee_rotation, max_people, track_rotated_people and export_type. When saving the workspace, it will create a TheiaFormatData_workspace folder in your session where each subfolder is containing the Theia workspace of a measurement. To open the workspace of a measurement, click on File > Load Workspace and select the subfolder of your choice. If Theia is closed, double-click on the results.p3d included in the subfolder of your choice.
-
-Example tested with:
- - QTM 2021.1 (build 6350)
- - Visual3D 2021.06.2
- - Theia 2021.1.1450
 
 ## Resources for using the Qualisys Project Automation Framework (PAF)
 
