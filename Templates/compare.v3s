@@ -2,8 +2,9 @@
 !First merge theia c3d and analog c3d
 !-----------------------------
 <?
-include ($template_directory . 'merge_theia_and_analog.v3s');
-include ($template_directory . 'markerless_model_calculations.v3s');
+include_once ($template_directory . 'prepare_variables.php');
+include_once ($template_directory . 'merge_theia_and_analog.v3s');
+include_once ($template_directory . 'markerless_model_calculations.v3s');
 ?> 
 
 ! Remove markerless static trial  to clean up the workspace
@@ -84,8 +85,8 @@ Set_Subject_Height
 ;
 
 <?
-include ($template_directory . 'add_meta_data_to_report.v3s');
-include ($template_directory . 'define_virtual_lab.v3s');
+include_once ($template_directory . 'add_meta_data_to_report.v3s');
+include_once ($template_directory . 'define_virtual_lab.v3s');
 ?> 
 
 

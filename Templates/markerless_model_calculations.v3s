@@ -106,24 +106,23 @@ Remove_Prefix_From_Point_Labels
 ! Model adaptations
 ! ============================
 Set_Subject_Weight
-/CALIBRATION_FILE=*Markerless*.c3d
+/CALIBRATION_FILE=*_static.c3d
 /WEIGHT=<?=$session["Weight"]?> 
 ;
 
 Set_Subject_Height
-/CALIBRATION_FILE=*Markerless*.c3d
+/CALIBRATION_FILE=*_static.c3d
 /HEIGHT=<?=$subject["Height"]?> 
 ;
 
 ! Add virtual lab segment oriented based on pelvis
 Append_Model_Template
-/CALIBRATION_FILE=*Markerless*.c3d
+/CALIBRATION_FILE=*_static.c3d
 /MODEL_TEMPLATE=<?=$template_directory;?>append_model.mdh
 ! /VIEW_BUILDMODEL_RESULTS=2
 ;
-
 Assign_Model_File
-/MODEL_NAME=*Markerless*.c3d
+/CALIBRATION_FILE=*_static.c3d
 /MOTION_FILE_NAMES=ALL_FILES
 ;
 
@@ -135,7 +134,7 @@ Set_Segment_Auto_Assign_Force
 
 !Make LTO amd RTO segment kinematic only
 Set_Segment_Properties
-/CALIBRATION_FILE=*Markerless*.c3d
+/CALIBRATION_FILE=*_static.c3d
 /SEGMENT_NAME=LTO
 /KINEMATIC_ONLY=TRUE
 ! /MASS=
@@ -161,7 +160,7 @@ Set_Segment_Properties
 ;
 
 Set_Segment_Properties
-/CALIBRATION_FILE=*Markerless*.c3d
+/CALIBRATION_FILE=*_static.c3d
 /SEGMENT_NAME=RTO
 /KINEMATIC_ONLY=TRUE
 ! /MASS=
@@ -187,7 +186,7 @@ Set_Segment_Properties
 ;
 
 Set_Segment_Properties
-/CALIBRATION_FILE=*Markerless*.c3d
+/CALIBRATION_FILE=*_static.c3d
 /SEGMENT_NAME=RTX
 /KINEMATIC_ONLY=TRUE
 ! /MASS=

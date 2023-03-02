@@ -8,7 +8,7 @@
 	<VOL_MIN_Y value="0" type="double" />
 	<DRAW_IMAGES value="TRUE" type="string" />
 	<THRESH_PROB_3D value="0.4" type="double" />
-	<B_USE_ANIMATION_MODEL value="false" type="string" />
+	<B_USE_ANIMATION_MODEL value="FALSE" type="string" />
 	<N_SQUARE_HIGH value="7" type="string" />
 	<VOL_MAX_X value="2" type="double" />
 	<TEST value="FALSE" type="string" />
@@ -27,7 +27,7 @@
 	<B_USE_3DOF_KNEE value="TRUE" type="string" />
 	<SIMILARITY_THRESHOLD value="0.3" type="double" />
 	<PIXEL_SIZE value="0.00345" type="double" />
-	<FILT_FREQ value="20.0" type="double" />
+	<FILT_FREQ value="8.0" type="double" />
 	<HALF_RES value="false" type="string" />
 	<ADD_IK_LINES value="FALSE" type="string" />
 	<THRESH_PROB value="0.4" type="double" />
@@ -59,7 +59,7 @@
 	<DIST_THRESH value="100" type="double" />
 	<SKIP_FRAMES_INT value="0" type="string" />
 	<N_SQUARES_WIDE value="9" type="string" />
-	<TRACK_ROT value="false" type="string" />
+	<TRACK_ROT value="FALSE" type="string" />
 	<TINY value="FALSE" type="string" />
 	<PLAYBACK value="1" type="string" />
 	<B_USE_FREE_FEET value="FALSE" type="string" />
