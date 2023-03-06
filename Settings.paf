@@ -26,18 +26,6 @@ Types:
       Analyses: [Theia and V3D Processing]
       Display order: [Session ID, Test condition, Operator, Comments]
       Directory pattern: $Creation date$_Markerless
-    Marker-based vs Markerless Comparison Session:
-      Fields: [Session ID, Test condition, Operator]
-      Measurements: [Static, Dynamic]
-      Analyses: [Theia and V3D Comparison Processing]
-      Display order: [Session ID, Test condition, Operator, Comments]
-      Directory pattern: $Creation date$_Markerless_Comparison
-    True Hybrid Session:
-      Fields: [Session ID, Test condition, Operator]
-      Measurements: [Object, Dynamic]
-      Analyses: [Theia and V3D Hybrid Processing]
-      Display order: [Session ID, Test condition, Operator, Comments]
-      Directory pattern: $Creation date$_Markerless_Hybrid
 
 Measurements:
   Fields:
@@ -55,45 +43,17 @@ Measurements:
     Count: 3
     Measurement type: Dynamic
     Fields: [Theia c3d file]
-  Object:
-    Maximum count: 1
-    Count: 1
-    Measurement type: Object
-    Fields: [Theia c3d file]
-    Process With Theia: false
 
 Analyses:
   Theia and V3D Processing:
     Type: Compound
     Components: [Internal Run Theia, Theia Tools Process, Visual3D Analysis]
-  Theia and V3D Comparison Processing:
-    Type: Compound
-    Components: [Internal Run Theia, Theia Tools Process, Visual3D Comparison]
-  Theia and V3D Hybrid Processing:
-    Type: Compound
-    Components: [Internal Run Theia, Theia Tools Process, Visual3D Hybrid]
   Visual3D Analysis:
     Type: External program
     Program display name: Visual 3d
     Export session: Yes
     Export measurements: c3d
     Arguments: [/s, $WorkingDirectory$create_workspace.v3s]
-    Template files: ['*.v3s']
-    Do not wait for Application: Yes
-  Visual3D Comparison:
-    Type: External program
-    Program display name: Visual 3d
-    Export session: Yes
-    Export measurements: c3d
-    Arguments: [/s, $WorkingDirectory$compare.v3s]
-    Template files: ['*.v3s']
-    Do not wait for Application: Yes
-  Visual3D Hybrid:
-    Type: External program
-    Program display name: Visual 3d
-    Export session: Yes
-    Export measurements: c3d
-    Arguments: [/s, $WorkingDirectory$hybrid.v3s]
     Template files: ['*.v3s']
     Do not wait for Application: Yes
   Internal Run Theia:
@@ -159,10 +119,6 @@ Fields:
     Type: Enum
     Values: [0, 1, 2, 3, 4, 5]
     Default: 0
-  Process With Theia:
-    Type: Boolean
-    Default: true
-    Hidden: Yes
 
 Columns:
   Default column definitions:

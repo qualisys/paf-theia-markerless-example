@@ -1,4 +1,4 @@
-# Qualisys PAF – Theia Markerless example
+# Qualisys PAF – Theia Markerless Basic Example
 
 ## Getting started
 
@@ -17,9 +17,9 @@ To download a release version (tested), please [Click here](https://github.com/q
 3. Install Visual3D.
 4. Set Project Options > Miscellaneous > Folder Options for "Visual 3d" to ```C:\Program Files\Visual3D\Visual3D.exe``` (adapt if Visual3D is installed at different location).
 5. Download data from Qualisys File Library (https://qfl.qualisys.com/#!/project/theiaexample)
-   > Note: Example data include two persons. While **John Doe** can be used with Theia to generate .c3d files (use `Markerless Session`), **Jim Doe** does not include videos and can be used to compare marker-based and markerless data (use `Marker-based vs Markerless Comparison Session`). This sesson type expects data to be captured by combined system of video cameras and marker-based cameras where markers are places on the body for the same trial that is used to capture videos. Script is set to work with sports marker set. If other marker set is required, it is necessary to adapt the script and model files accordingly.
+   > Note: Example data include three persons. **John Doe** can be used with Theia to generate .c3d files, **Jim Doe** does not include videos and can be used to compare marker-based and markerless data and is intended to be used this this repository. This sesson type expects data to be captured by combined system of video cameras and marker-based cameras where markers are places on the body for the same trial that is used to capture videos. Script is set to work with sports marker set. If other marker set is required, it is necessary to adapt the script and model files accordingly. It is intended for this example: https://github.com/qualisys/paf-theia-markerless-comparison-example, **Joe Doe** does not include videos and can be used as an example for this repository how to add objects to markeless analysis. Objects must have markers on. It is important that both marker cameras and video camera capture at the same rate. It is intended for this example: https://github.com/qualisys/paf-theia-markerless-true-hybrid-example.
 6. Extract downloaded .zip file into the projects data folder "Theia Markerless Example\Data"
-7. To process the data, you have to first click on **Theia and V3D Processing**
+7. To process the data, you have to first click on **Theia and V3D Processing**.
     > Note: The following Theia specific settings along with their descriptions are available in Templates\settings.php: save_workspace, theia_filter_type, theia_filter_cutoff, enable_knee_rotation, max_people, track_rotated_people and export_type. When saving the workspace, it will create a TheiaFormatData_workspace folder in your session where each subfolder is containing the Theia workspace of a measurement. To open the workspace of a measurement, click on File > Load Workspace and select the subfolder of your choice. If Theia is closed, double-click on the results.p3d included in the subfolder of your choice.
 
 ## Resources for using the Qualisys Project Automation Framework (PAF)
@@ -40,6 +40,8 @@ Our official examples for various processing engines:
 - [OpenSim](https://github.com/qualisys/paf-opensim-example)
 - [Python](https://github.com/qualisys/paf-python-example)
 - [Theia Markerless](https://github.com/qualisys/paf-theia-markerless-example)
+- [Theia Markerless Comparison](https://github.com/qualisys/paf-theia-markerless-comparison-example)
+- [Theia Markerless True Hybrid](https://github.com/qualisys/paf-theia-markerless-true-hybrid-example)
 - [Visual3D](https://github.com/qualisys/paf-visual3d-example)
 
 _As of QTM version 2.17, the official Qualisys PAF examples can be used without any additional license. Note that some more advanced analysis types require a license for the "PAF Framework Developer kit" (Article number 150300)._

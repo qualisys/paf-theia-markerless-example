@@ -1,6 +1,65 @@
 <?
 include_once ($template_directory . 'prepare_variables.php');
-include_once ($template_directory . 'merge_theia_and_analog.v3s');
+?> 
+
+!=============================
+!Open files
+!=============================
+
+Manage_Theia3D_Merge
+/ROOT_FOLDER=<?=$working_directory;?> 
+! /ACTION=
+! /TAGS=ACTION
+/IMPORT_ANALOG_FILES=TRUE
+! /MERGE_THEIA3D_FILES=FALSE
+! /MERGE_THEIA3D_AND_OTHER_FILES=FALSE
+/THEIA3D_SESSION_FOLDER=TheiaFormatData
+/THEIA3D_FILE_MASK=*pose_subject.c3d
+! /THEIA3D_PREFIX=
+! /THEIA3D_SUBJECT_TAG=
+/OTHER3D_SESSION_FOLDER=<?=$session["Filename"];?> 
+! /OTHER3D_FILE_MASK=
+! /OTHER3D_MODEL_MASK=
+! /OTHER3D_MODEL_TEMPLATE_MASK=
+! /OTHER3D_PREFIX=
+! /OTHER3D_SUBJECT_TAG=
+! /NUMBER_OF_SESSION_FILES_ALLOWED=
+/SAVE_DEFAULT_CMZ_FILES=FALSE
+! /OPEN_CMZ_LIBRARY=FALSE
+/INPUT_FOLDER_STRUCTURE=QTM
+! /VISUAL3D_PIPELINE=
+;
+
+<?
+foreach($measurements as $m) {
+	if($m["Used"] === "True") {
+?> 
+		Assign_Tags_To_Files
+		/MOTION_FILE_NAMES=*Dynamic*.c3d
+		! /QUERY=
+		/TAGS=<?=$m["Measurement_type"];?> 
+		;
+
+		Assign_Tags_To_Files
+		/MOTION_FILE_NAMES=*Dynamic*.c3d
+		! /QUERY=
+		/TAGS=<?=$session['Test_condition'];?> 
+		;
+
+		Assign_Tags_To_Files
+		/MOTION_FILE_NAMES=*Dynamic*.c3d
+		! /QUERY=
+		/TAGS=<?=$m['Comments'];?> 
+		;
+
+<?
+	}
+}?> 
+
+Recalc
+;
+
+<?
 include_once ($template_directory . 'markerless_model_calculations.v3s');
 include_once ($template_directory . 'add_meta_data_to_report.v3s');
 include_once ($template_directory . 'define_virtual_lab.v3s');
