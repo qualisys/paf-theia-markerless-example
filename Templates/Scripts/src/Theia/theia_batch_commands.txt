@@ -1,5 +1,6 @@
-STATE::RUN
-DIR::C:\Users\user\Desktop\QTM Projects\Baseball\Data\Jim Doe\Baseball Markerless Right-handed\TheiaFormatData
+STATE::IDLE
+DIR::C:\Users\labbuser\Documents\Projects\Baseball Theia Testing\Data\Regression test 08 v4.4.0.345\Baseball Markerless Right-handed\TheiaFormatData
+USE_ROOT::TRUE
 WORKSPACE::FALSE
 RUNANALYSIS::TRUE
 SAVEINFERENCE::FALSE
@@ -8,4 +9,4 @@ SAVEPOSE::TRUE
 SAVEWORK::FALSE
 SAVEFBX::FALSE
 FBXCOORDSYS::THEIA3D
-PREF_PATH::C:\Users\user\Desktop\QTM Projects\Baseball\Templates\Scripts\src\Theia\theia_preferences.pxt
+PREF_PATH::C:\Users\labbuser\Documents\Projects\Baseball Theia Testing\Templates\Scripts\src\Theia\theia_preferences.pxt
