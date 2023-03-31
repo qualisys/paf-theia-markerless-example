@@ -12,18 +12,19 @@ foreach ($measurements as $m) {
 	$dest_name = $working_directory . 'TheiaFormatData\\' . $foldername . '\\pose_subject.c3d';
 	
 	if ($m["Used"] === "True" && $m["Process_With_Theia"] !== "False") {
-		echo "! Renaming ". $file_to_copy . "\n";
-		echo "! To ". $dest_name . "\n";
-		
 		// Check if $file_to_copy is a valid name
-		if (file_exists($file_to_copy))
+		if (file_exists($file_to_copy)) {
 			copy($file_to_copy, $dest_name);
+			echo "! Renaming ". $file_to_copy . "\n";
+			echo "! To ". $dest_name . "\n";
+		}
 	}
 	else {
 		// Delete pose_subject.c3d first otherwise unselected trials would be included in analysis
-		if (file_exists($dest_name))
+		if (file_exists($dest_name)) {
 			unlink($dest_name);
-		echo "! Removing " . $dest_name . "\n";
+			echo "! Removing " . $dest_name . "\n";
+		}
 	}
 }
 ?> 
