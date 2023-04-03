@@ -10,6 +10,11 @@ To download the latest version (not tested) of the example project to your compu
 
 To download a release version (tested), please [Click here](https://github.com/qualisys/paf-theia-markerless-example/releases)
 
+## Preparing QTM project
+There are two ways how to set up the project for QTM.
+1. Simple method is to unzip the zip file and open the project from QTM (File > Open Project) or by double clicking on Settings.paf in File Explorer.
+2. If you plan to create multiple projects based on this example, unzip the zip file to `C:\Program Files (x86)\Qualisys\Qualisys Track Manager\Packages`, name the folder `Theia Markeless Example` and delete Settings.qtmproj. Then go to QTM > File > New Project and create new project based on Theia Markerless Example.
+
 ## Preparing Qualisys data for Theia3D processing
 
 1. Install [Theia](https://www.theiamarkerless.ca/) and accompanying engine.
