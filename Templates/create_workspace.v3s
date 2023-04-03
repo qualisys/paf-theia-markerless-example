@@ -10,17 +10,17 @@ Manage_Theia3D_Merge
 /ROOT_FOLDER=<?=$working_directory;?> 
 ! /ACTION=
 ! /TAGS=ACTION
-/IMPORT_ANALOG_FILES=TRUE
+! /IMPORT_ANALOG_FILES=FALSE
 ! /MERGE_THEIA3D_FILES=FALSE
-! /MERGE_THEIA3D_AND_OTHER_FILES=FALSE
+/MERGE_THEIA3D_AND_OTHER_FILES=TRUE
 /THEIA3D_SESSION_FOLDER=TheiaFormatData
 /THEIA3D_FILE_MASK=*pose_subject.c3d
 ! /THEIA3D_PREFIX=
 ! /THEIA3D_SUBJECT_TAG=
 /OTHER3D_SESSION_FOLDER=<?=$session["Filename"];?> 
-! /OTHER3D_FILE_MASK=
-! /OTHER3D_MODEL_MASK=
-! /OTHER3D_MODEL_TEMPLATE_MASK=
+/OTHER3D_FILE_MASK=<?echo "*Object*.c3d";?> 
+/OTHER3D_MODEL_MASK=<?echo "*Bat*.c3d";?> 
+/OTHER3D_MODEL_TEMPLATE_MASK=<?=$template_directory . "object.mdh";?> 
 ! /OTHER3D_PREFIX=
 ! /OTHER3D_SUBJECT_TAG=
 ! /NUMBER_OF_SESSION_FILES_ALLOWED=
@@ -33,25 +33,26 @@ Manage_Theia3D_Merge
 <?
 foreach($measurements as $m) {
 	if($m["Used"] === "True") {
+		$path_parts = pathinfo($m["Filename"]);
+		$filename = $path_parts['filename'];
 ?> 
 		Assign_Tags_To_Files
-		/MOTION_FILE_NAMES=*Dynamic*.c3d
+		/MOTION_FILE_NAMES=<?echo $working_directory .'TheiaFormatData\\' .$filename . '\\'.$filename;?>.c3d
 		! /QUERY=
 		/TAGS=<?=$m["Measurement_type"];?> 
 		;
 
 		Assign_Tags_To_Files
-		/MOTION_FILE_NAMES=*Dynamic*.c3d
+		/MOTION_FILE_NAMES=<?echo $working_directory .'TheiaFormatData\\' .$filename . '\\'.$filename;?>.c3d
 		! /QUERY=
 		/TAGS=<?=$session['Test_condition'];?> 
 		;
 
 		Assign_Tags_To_Files
-		/MOTION_FILE_NAMES=*Dynamic*.c3d
+		/MOTION_FILE_NAMES=<?echo $working_directory .'TheiaFormatData\\' .$filename . '\\'.$filename;?>.c3d
 		! /QUERY=
 		/TAGS=<?=$m['Comments'];?> 
 		;
-
 <?
 	}
 }?> 
