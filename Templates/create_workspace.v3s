@@ -18,9 +18,9 @@ Manage_Theia3D_Merge
 ! /THEIA3D_PREFIX=
 ! /THEIA3D_SUBJECT_TAG=
 /OTHER3D_SESSION_FOLDER=<?=$session["Filename"];?> 
-/OTHER3D_FILE_MASK=<?echo "*Object*.c3d";?> 
-/OTHER3D_MODEL_MASK=<?echo "*Bat*.c3d";?> 
-/OTHER3D_MODEL_TEMPLATE_MASK=<?=$template_directory . "object.mdh";?> 
+/OTHER3D_FILE_MASK=<?echo "*Dynamic*.c3d";?> 
+/OTHER3D_MODEL_MASK=<?echo "*Object*.c3d";?> 
+/OTHER3D_MODEL_TEMPLATE_MASK=<?=$template_directory . "Object.mdh";?> 
 ! /OTHER3D_PREFIX=
 ! /OTHER3D_SUBJECT_TAG=
 ! /NUMBER_OF_SESSION_FILES_ALLOWED=
