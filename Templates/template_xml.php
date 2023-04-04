@@ -13,6 +13,8 @@ foreach( $xml->Fields->children() as $field )
 //Session fields
 $session = array();
 $session["Type"] = (string)$xml->Session["Type"];
+$session["Filename"] = (string)$xml->Session["Filename"];
+
 foreach( $xml->Session->Fields->children() as $field )
 {
     $session[$field->getName()] = (string)$field;

@@ -3,7 +3,7 @@ Package Information:
   Name: Theia Markerless Example
   Version: 1.0.1
   Required QTM version: 2020.2.5770
-  Encoding bytes: â‚¬â‚¬â‚¬â‚¬â‚¬
+  Encoding bytes: €€€€€
 
 Root type: Subject
 Default fields: [Creation date, Creation time]
@@ -26,12 +26,6 @@ Types:
       Analyses: [Theia and V3D Processing]
       Display order: [Session ID, Test condition, Operator, Comments]
       Directory pattern: $Creation date$_Markerless
-    Marker-based vs Markerless Comparison Session:
-      Fields: [Session ID, Test condition, Operator]
-      Measurements: [Static, Dynamic]
-      Analyses: [Theia and V3D Comparison Processing]
-      Display order: [Session ID, Test condition, Operator, Comments]
-      Directory pattern: $Creation date$_Markerless_Comparison
 
 Measurements:
   Fields:
@@ -54,9 +48,14 @@ Analyses:
   Theia and V3D Processing:
     Type: Compound
     Components: [Internal Run Theia, Theia Tools Process, Visual3D Analysis]
-  Theia and V3D Comparison Processing:
-    Type: Compound
-    Components: [Internal Run Theia, Theia Tools Process, Visual3D Comparison]
+  Visual3D Analysis:
+    Type: External program
+    Program display name: Visual 3d
+    Export session: Yes
+    Export measurements: c3d
+    Arguments: [/s, $WorkingDirectory$create_workspace.v3s]
+    Template files: ['*.v3s']
+    Do not wait for Application: Yes
   Internal Run Theia:
     Type: External program
     Program display name: Theia
@@ -67,22 +66,6 @@ Analyses:
     Export session: Yes
     Template: Templates\Scripts\src\Theia\run_theia_tools.php
     Export measurements: [c3d,xml settings]
-  Visual3D Analysis:
-    Type: External program
-    Program display name: Visual 3d
-    Export session: Yes
-    Export measurements: c3d
-    Arguments: [/s, $WorkingDirectory$create_workspace.v3s]
-    Template files: ['*.v3s']
-    Do not wait for Application: Yes
-  Visual3D Comparison:
-    Type: External program
-    Program display name: Visual 3d
-    Export session: Yes
-    Export measurements: c3d
-    Arguments: [/s, $WorkingDirectory$compare.v3s]
-    Template files: ['*.v3s']
-    Do not wait for Application: Yes
 
 Fields:
   ID:
