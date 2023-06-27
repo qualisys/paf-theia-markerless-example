@@ -1,4 +1,10 @@
 # Changelog
+## [1.1.2]
+Copy files instead of symlinks to make Theia processing work for users using exFAT drive
+
+## [1.1.1]
+Fix Theia-Tools when marker and marker_max FOV are different
+Add enable_free_arms and enable_free_feet Theia settings in settings.php
 
 ## [1.1.0]
 Split repository into three seperate ones to simplify the code  
