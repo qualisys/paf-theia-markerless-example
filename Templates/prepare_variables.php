@@ -1,7 +1,14 @@
 <?
 include_once ($template_directory . 'template_xml.php');
 
-//make a copy of pose_filt file if pose_filt_0.c3d is not the correct one
+// Make a copy of pose_filt file if pose_filt_0.c3d is not the correct one
+
+// First delete all pose_subject.c3d, othervise there could be left over pose_subject.c3d after user manualy deletes .qtm files in PAF pane.
+$files = glob($working_directory . 'TheiaFormatData\\*\\pose_subject.c3d');
+foreach ($files as $f) {
+    unlink($f);
+}
+
 foreach ($measurements as $m) {
 	$path_parts = pathinfo($m["Filename"]);
 	$foldername = $path_parts['filename'];
@@ -23,7 +30,7 @@ foreach ($measurements as $m) {
 		// Delete pose_subject.c3d first otherwise unselected trials would be included in analysis
 		if (file_exists($dest_name)) {
 			unlink($dest_name);
-			echo "! Removing " . $dest_name . "\n";
+			echo "! Deleting unused " . $dest_name . "\n";
 		}
 	}
 }
