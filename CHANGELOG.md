@@ -1,4 +1,8 @@
 # Changelog
+
+## [1.1.4]
+Fix preventing to load to Visual3D workspace .c3d of measurements deleted by user when reprocessing the data
+
 ## [1.1.2]
 Copy files instead of symlinks to make Theia processing work for users using exFAT drive
 
