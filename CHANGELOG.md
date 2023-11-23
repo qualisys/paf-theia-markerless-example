@@ -1,5 +1,8 @@
 # Changelog
 
+## [1.1.5]
+Tested with QTM 2023.3.12256 and Visual3D 2023.10.2.
+
 ## [1.1.4]
 Fix preventing to load to Visual3D workspace .c3d of measurements deleted by user when reprocessing the data
 
