@@ -13,14 +13,14 @@ To download a release version (tested), please [Click here](https://github.com/q
 ## Preparing QTM project
 There are two ways how to set up the project for QTM.
 1. Simple method is to unzip the zip file and open the project from QTM (File > Open Project) or by double clicking on Settings.paf in File Explorer.
-2. If you plan to create multiple projects based on this example, unzip the zip file to `C:\Program Files (x86)\Qualisys\Qualisys Track Manager\Packages`, name the folder `Theia Markeless Example` and delete Settings.qtmproj. Then go to QTM > File > New Project and create new project based on Theia Markerless Example.
+2. If you plan to create multiple projects based on this example, unzip the zip file to `C:\Program Files (x86)\Qualisys\Qualisys Track Manager\Packages` or to `C:\Program Files\Qualisys\Qualisys Track Manager\Packages` in case of using QTM 64 bit, name the folder `Theia Markeless Example` and delete Settings.qtmproj. Then go to QTM > File > New Project and create new project based on Theia Markerless Example.
 
 ## Preparing Qualisys data for Theia3D processing
 
 1. Install [Theia](https://www.theiamarkerless.ca/) and accompanying engine.
 2. In QTM, set Project Options > Miscellaneous > Folder Options for "Theia" to ```C:\Program Files\Theia\Theia3D\Theia3D.exe``` (adapt if Theia is installed at different location).
 3. Install Visual3D.
-4. Set Project Options > Miscellaneous > Folder Options for "Visual 3d" to ```C:\Program Files\Visual3D\Visual3D.exe``` (adapt if Visual3D is installed at different location).
+4. Set Project Options > Miscellaneous > Folder Options for "Visual3D" to ```C:\Program Files\Visual3D x64\Visual3D.exe``` (adapt if Visual3D is installed at different location).
 5. Download data from Qualisys File Library (https://qfl.qualisys.com/#!/project/theiaexample).
 
    Example data includes three types of data:
