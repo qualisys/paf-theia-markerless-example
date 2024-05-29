@@ -1,5 +1,8 @@
 # Changelog
 
+## [1.1.7]
+Fix to provide compatibility with Visual3D 2024.05.3.
+
 ## [1.1.5]
 Tested with QTM 2023.3.12256 and Visual3D 2023.10.2.
 
