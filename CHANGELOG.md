@@ -1,5 +1,8 @@
 # Changelog
 
+## [1.1.8]
+Tested with Visual3D 2024.06.1.
+
 ## [1.1.7]
 Fix to provide compatibility with Visual3D 2024.05.3.
 
