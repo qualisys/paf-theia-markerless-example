@@ -1,5 +1,8 @@
 # Changelog
 
+## [1.1.9]
+Tested with Theia3D 2024.1 and Visual3D 2024.10.4.
+
 ## [1.1.8]
 Tested with Visual3D 2024.06.1.
 
