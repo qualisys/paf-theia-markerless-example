@@ -10,10 +10,14 @@ To download the latest version of the example project to your computer, you can 
 
 ## Preparing QTM project
 There are two ways how to set up the project for QTM:
-1. If you are going to use this example in a single project, then the simple method is to unzip the zip file and open the project from QTM (File > Open Project) or by double clicking on Settings.paf in File Explorer.
-2. If you plan to create multiple projects based on this example, unzip the zip file to `C:\Program Files\Qualisys\Qualisys Track Manager\Packages`, name the folder `Theia Markerless Example` and delete Settings.qtmproj. Then go to QTM > File > New Project and create new project based on Theia Markerless Example.
-
-To control Theia3D via PAF it is neccessary to download Theia-Tools.exe from the corresponding [release](https://github.com/qualisys/paf-theia-markerless-example/releases/latest) and move the extracted content into the `Templates/Assets/Programs/Theia-Tools/` folder of the project directory.
+1. If you are going to use this example in a single project:
+    1. Unzip the zip file with source code na copy its content into a QTM project
+    2. Download Theia-Tools.exe from the corresponding [release](https://github.com/qualisys/paf-theia-markerless-example/releases/latest) and move the extracted content into the `Templates/Assets/Programs/Theia-Tools/` folder of the project.
+2. If you plan to create multiple projects based on this example, follow these steps to make the example available in the New Project dialog in QTM:
+    1. Unzip the zip file with source code to `C:\Program Files\Qualisys\Qualisys Track Manager\Packages
+    2. Name the folder `Theia Markerless Example`
+    3. Delete Settings.qtmproj. This makes the example available in QTM. Then for to QTM > File > New Project and create new project based on Theia Markerless Example.
+    4. Download Theia-Tools.exe from the corresponding [release](https://github.com/qualisys/paf-theia-markerless-example/releases/latest) and move the extracted content into folder `C:\Program Files\Qualisys\Qualisys Track Manager\Packages\Theia Markerless Example\Templates\Assets\Programs\Theia-Tools\`.
 
 ## Preparing Qualisys data for Theia3D processing
 
