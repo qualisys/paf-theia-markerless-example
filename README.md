@@ -2,7 +2,7 @@
 
 ## Getting started
 
-To download the latest version (not tested) of the example project to your computer, you can either:
+To download the latest version of the example project to your computer, you can either:
 
 * [Click here](https://github.com/qualisys/paf-theia-markerless-example/releases/latest) to download the latest release.
 <br>_— or —_
