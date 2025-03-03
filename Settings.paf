@@ -22,8 +22,8 @@ Types:
   Session:
     Markerless Session:
       Fields: [Session ID, Test condition, Operator]
-      Measurements: [Dynamic]
-      Analyses: [Theia and V3D Processing]
+      Measurements: [Static, Dynamic]
+      Analyses: [Theia and V3D Processing, Visual3D Analysis]
       Display order: [Session ID, Test condition, Operator, Comments]
       Directory pattern: $Creation date$_Markerless
 
