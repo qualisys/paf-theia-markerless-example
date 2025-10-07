@@ -42,7 +42,7 @@
 	<DRAW_IMAGES value="TRUE" type="string" />
 	<EXCLUDED_CAMS value="" type="string" />
 	<FAST_MODE value="false" type="bool" />
-	<FILT_FREQ value="12.0" type="double" />
+	<FILT_FREQ value="8.0" type="double" />
 	<FOOT_GROWTH value="120" type="double" />
 	<FRAME_BREAK value="0" type="int" />
 	<F_IK_SMOOTH_VARIANCE value="0.001" type="double" />

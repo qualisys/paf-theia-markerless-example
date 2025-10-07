@@ -8,7 +8,6 @@ foreach (glob($template_directory . 'Assets\Programs\Theia-Tools\Theia-Tools*.ex
 $wrapped_working_dir =  '"' . $working_directory . '\"';
 $theia_format_data_path =  '"' . $working_directory . 'TheiaFormatData' . '"';
 $theia_batch_commands_dir = '"' . $template_directory . 'Scripts\src\Theia\\theia_batch_commands.txt' . '"';
-$settings_php_path  = '"' . $template_directory . 'settings.php' . '"' ;
 
 switch (trim($analysis_name)) {
 
@@ -16,8 +15,14 @@ switch (trim($analysis_name)) {
         $command_string = $command_string_base . ' --script process' . 
         ' --path-to-session-folder ' . $wrapped_working_dir . 
         ' --path-to-batch-commands ' . $theia_batch_commands_dir . 
-        ' --theia-data-dir ' . $theia_format_data_path . 
-        ' --settings-php-path ' . $settings_php_path;
+        ' --theia-data-dir ' . $theia_format_data_path; 
+        break;
+
+    case 'Upsample Data':
+        $command_string = $command_string_base . ' --script upsample-theia-data' . 
+        ' --path-to-session-folder ' . $wrapped_working_dir . 
+        ' --path-to-batch-commands ' . $theia_batch_commands_dir . 
+        ' --theia-data-dir ' . $theia_format_data_path; 
         break;
     }
 
