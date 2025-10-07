@@ -33,8 +33,16 @@ There are two ways how to set up the project for QTM:
    3. **Joe Doe** is intended for true hybrid example: https://github.com/qualisys/paf-theia-markerless-true-hybrid-example. It does not include videos and can be used as an example for this repository how to add objects to markeless analysis. Objects must have markers on. It is important that both marker cameras and video camera capture at the same rate.
 6. Extract downloaded .zip file into the `Data` folder of the project.
 7. To process the data, you have to click on **Start Processing** button.
-    - The following Theia specific settings along with their descriptions are available in Templates\settings.php: `save_workspace`, `theia_filter_type`, `theia_filter_cutoff`, `enable_knee_rotation`, `enable_free_arms`, `enable_free_feet`, `max_people`, `track_rotated_people` and `export_type`. When saving the workspace, it will create a TheiaFormatData_workspace folder in your session where each subfolder is containing the Theia workspace of a measurement. To open the workspace of a measurement, click on File > Load Workspace and select the subfolder of your choice. If Theia is closed, double-click on the results.p3d included in the subfolder of your choice.  
-    - Theia can identify and process data for more then one subject if more persons are in the volume. The subject that yields best data is typically selected but sometimes other person is wrongly chosen. If that happens, there is an option to choose which c3d file is actual subject. To select other c3d, activate the measurement, navigate to `Theia c3d file` field and chose number of Theia file. To find out what c3d files Theia has created, go to working directory of active session, open `TheiaFormatData` folder, open folder of active measurement and review `pose_filt_*.c3d` files in Visual3D.
+
+Theia3D behaviour can be modified by settings files located at [your project]\Templates\Assets\Theia\\. The list of options is  extensive but only a few settings are important:
+- in theia_batch_commands.txt:
+    - SAVEWORK - Defines whether to save workspace or not when processing with Theia. Default to FALSE.
+- in theia_preferences.pxt:
+    - FILT_FREQ  - Lowpass filter cut-off frequency in Hz. Default is 8.
+    - B_USE_FREE_FEET - Enables a free joint (six degrees of freedom) at the ankles. Default is false.
+     - MAX_PEOPLE - Maximum number of people being tracked. Default is 1 meaning that only the main person will be tracked. If -1, all people will be tracked. 
+
+Theia can identify and process data for more then one subject if more persons are in the volume. The subject that yields best data is typically selected but sometimes other person is wrongly chosen. If that happens, there is an option to choose which c3d file is actual subject. To select other c3d, activate the measurement, navigate to `Theia c3d file` field and chose number of Theia file. To find out what c3d files Theia has created, go to working directory of active session, open `TheiaFormatData` folder, open folder of active measurement and review `pose_filt_*.c3d` files in Visual3D.
 
 > Note that all data (videos, markers, forces, other analog) must be captured at capture rates that are integer multiple of each other, so that no resampling is required. Failing this requirement would lead to the data being out of sync.
 
