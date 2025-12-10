@@ -39,8 +39,8 @@ Theia3D behaviour can be modified by settings files located at [your project]\Te
     - SAVEWORK - Defines whether to save workspace or not when processing with Theia. Default to FALSE.
 - in theia_preferences.pxt:
     - FILT_FREQ  - Lowpass filter cut-off frequency in Hz. Default is 8.
-    - B_USE_FREE_FEET - Enables a free joint (six degrees of freedom) at the ankles. Default is false.
-     - MAX_PEOPLE - Maximum number of people being tracked. Default is 1 meaning that only the main person will be tracked. If -1, all people will be tracked. 
+    - B_USE_FREE_FEET - Enables a free joint (six degrees of freedom) at the ankles. Default is FALSE.
+    - MAX_PEOPLE - Maximum number of people being tracked. Default is 1 meaning that only the main person will be tracked. If -1, all people will be tracked. 
 
 Theia can identify and process data for more then one subject if more persons are in the volume. The subject that yields best data is typically selected but sometimes other person is wrongly chosen. If that happens, there is an option to choose which c3d file is actual subject. To select other c3d, activate the measurement, navigate to `Theia c3d file` field and chose number of Theia file. To find out what c3d files Theia has created, go to working directory of active session, open `TheiaFormatData` folder, open folder of active measurement and review `pose_filt_*.c3d` files in Visual3D.
 
