@@ -1,5 +1,8 @@
 # Changelog
 
+## [1.1.12]
+Tested with Theia3D 2025.2.0 and Visual3D 2024.10.4.
+
 ## [1.1.11]
 Using theia_prefences.pxt file for Theia settings instead of settings.php.   
 Tested with Theia3D 2025.1.2 and Visual3D 2024.10.4.
