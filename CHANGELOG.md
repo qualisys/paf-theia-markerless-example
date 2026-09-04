@@ -1,5 +1,9 @@
 # Changelog
 
+## [1.1.14]
+Updated preferences for Theia3D 2026.1.X.  
+Tested with QTM 2026.2 (build 17495), Theia3D 2026.1.X and Visual3D 2026.01.3.
+
 ## [1.1.13]
 Tested with QTM 2026.1 (build 16751), Theia3D 2025.2.0 and Visual3D 2026.01.3.
 
