@@ -11,7 +11,7 @@ To download the latest version of the example project to your computer, you can 
 ## Preparing QTM project
 There are two ways how to set up the project for QTM:
 1. If you are going to use this example in a single project:
-    1. Unzip the zip file with source code na copy its content into a QTM project
+    1. Unzip the source code (zip) file, delete the settings.qtmproj file, and copy the remaining content into a QTM project
     2. Download Theia-Tools.exe from the corresponding [release](https://github.com/qualisys/paf-theia-markerless-example/releases/latest) and move the extracted content into the `Templates/Assets/Programs/Theia-Tools/` folder of the project.
 2. If you plan to create multiple projects based on this example, follow these steps to make the example available in the New Project dialog in QTM:
     1. Unzip the zip file with source code to `C:\Program Files\Qualisys\Qualisys Track Manager\Packages
